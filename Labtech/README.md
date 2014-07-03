@@ -23,4 +23,4 @@ What the script does
 2. Download the [Roaming Client msi](http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi) to the above folder
 3. If the file is unable to be download, open a ticket
 4. Use `msiexec` to install the downloaded MSI file silently and with no UI.
-5. Open a ticket documentating that the roaming client has been installed.
+5. Open a ticket documenting that the roaming client has been installed.
