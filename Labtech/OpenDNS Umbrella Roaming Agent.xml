@@ -5,10 +5,18 @@
 	<PackedScript>
 		<NewDataSet>
 			<Table>
-				<ScriptId>5782</ScriptId>
-				<FolderId>193</FolderId>
-				<ScriptName>Deploy Umbrella Agent*</ScriptName>
-				<ScriptNotes>Script for Umbrella Roaming agent deployment</ScriptNotes>
+				<ScriptId>0</ScriptId>
+				<FolderId>0</FolderId>
+				<ScriptName>Deploy OpenDNS Roaming Client</ScriptName>
+				<ScriptNotes>Created by Jason Phelps, Sales Engineer, MSP at OpenDNS [jphelps@opendns.com]
+
+This script is for the OpenDNS Roaming Client deployment.  This script uses prompts for the correct parameters that are used with the installer.    
+
+The installation string hides the UI and the Add/Remove Programs entry by default.  Removing the `HIDE_UI` or `HIDE_ARP` value(s) can modify the level of visibility of the Roaming Client.
+
+See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more information on the LabTech script.
+
+See https://support.opendns.com/entries/55881150 for more information on the roaming client parameters.</ScriptNotes>
 				<Permission>0,</Permission>
 				<EditPermission>0,</EditPermission>
 				<ComputerScript>1</ComputerScript>
@@ -16,30 +24,12 @@
 				<MaintenanceScript>0</MaintenanceScript>
 				<FunctionScript>0</FunctionScript>
 				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jrdeTBK93Z2d9O9R/d2Hu08SF9+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyO9rK9yYN7s93tgwf7n27v7uZ72w/zBzvbOzu79+/P9g52qCPzPr/w+K4/pN84+X8ARr8E6+IAAAA=</LicenseData>
-				<ScriptData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih6/ntbFqn2atdnRb5ykqf7d8B/05+m7ts7w7bMiL2dNetd88TKrs0Xe5nVz9NXr01dnT3//Z6++/OL3P/nyxbOzz3//Z2fPT0dfvvo89vGzsxefn756+ersxZvel4/venC1p8/LapKVXteC4k9Sk6JaHu3uPXz4YGfv0wc7j++G3wTNP18Xs6O9bG/y4N5sd/vgwf6n27u7+d72w/zBzvbOzu79+7O9g529nV0DhV9gkugHjU+g122+shgeT1vG5PFd/U0/f7Ze8t9nM3zn/eXTcLdD073O3/c6f+93/r7vEaaq2yOQAT/1s5Nq2RbLdY7P7e/63ZfN82JR8CvmV/3mbDnLl23Gg6Fv/T99kjgqbCDL3iay3Hs4TJijRzSTxfn1d4vlrLpqnubN27ZaKYvs/jwm2t5Gop0uZzG6ffk6RrkPptzu+1Nu92Aj6XZ/Fkm3kXJv5kWTLrLpvFjmKf26rNq0Xi+XxfIizdKZkDG9FO2SVuepEnicpl+u8uXTF6/TWZXre/m0Wizy5Swtlk2blSWAtPM8fVVlC/x+UhY0xJQAvc5rwBz/rEzP3vtPz2bG/lmdnd37PzQ1ee//S4S5QU1+gMR/Dcrtf9OU+9nUlRsF/kl+UYh4f7WY1HlZZkYsz1Rqf1Zk8v43TcCfVda7v7+Bgr972TaX01lR/+6/7yqbvs0u8ub3XSstf1Zo9+n/p2i3ifnmbbt6dPduM8/qfDauyIDMls2YrMbdWkzEXUIqr1d10eR3iaB5Rj+viuXdVV3N1gzz7uu8Xa/Gi6aI03rj9Py+zPP0SxfIXjhBoJ/+9j4T9WBgonb/XzlRu1+XyQep2J0KQ8UudR+diaYxcL4WsQ/+vyQVG1Xy704czpRmmm8gc3qeFWU+S9uKnK6rZVlls3F6+q5ooc4bRmw8/tnxqR7+f4na+59uovaUzV0x+92HFAjpo9Wa1JBr0mXg3x1jzqbt6YImxDTqsO+Rta8d9/eZnUQ1uHCICaJ0+oIyAb/7OP3xZ8dnz796ZZID++HkDMJWiEzTVEFEwCvU+8EU7+78f2mOf5h+8+7XCPh+7ihzg+Mc173frLbY/cZDsG/SX+4SbKNyNlHu8YUnX/STlG7WkhPzs0O//29FapvULZmt/F0+Te8W6fv5FOndX7RM7z5/n7fad21KCdjf/+zpZ79nPBH7e/L3Xjb2s99zU2r290yR52V4Awnf3zP99tnT09//q7PPduW341cvP9v92WGKoSD0/5Xu5f0NTPFNq+f3DC5/bgmzt7NBWgY4x37edUSQRyum+fOqWp1Ua8ROX8uX3v3/Voh5mwS60Qxq7n52JHIo4PvaZPs5M3NKphS6eg27lqZCRziXgVfZrKfTvPlZSt0iTf7NUjTCiN8YRbH8NkjRQdHsyvanA7J9fyCuMB6cxBHxAKFL1v9PhW8/RNMBZfzNEmbvZ5Ewu/ALBxnOaLzf/9XJAKcZznktIny+Nmqxw3rvS8RvPDz62STi3u4GGt7b+VlRa3vfeDx072eRQrs7uxtI9Hv2Fdvv+Z75P+PNdDXboMrcrN32vvFo6WeVuptXsn943sveN76o9bNKtltlNQKbOESur0mubzzK+Dlz9m6fcA48P8k+j9OfHfL+fyoE+X95hpkSv6dP+3nfbyyrHAMeTyrvfeMh0odP6/87ksp7B/9foszt1G/PsfyGdcQ3Hsb8f00FX2WNCcCJyD87MTh84P/v5Bm/hiZ2lPpZ18QnX37x8vnpm7gyfv3Vycnp69cfoowdfFpOvI0+vveNx2o/m5O72Vc24cU3zP7feKx2CwqZv59mbXb0Gyf/D6wFyxGiLgAA</ScriptData>
+				<ScriptData>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</ScriptData>
 				<ScriptVersion>1299702670</ScriptVersion>
 				<ScriptGuid>2a2b73d1-8746-11e2-9e70-00155d280201</ScriptGuid>
-				<ScriptFlags>5</ScriptFlags>
+				<ScriptFlags>4</ScriptFlags>
 				<Parameters>USERID_FROM_CONFIG_FILE,ORGID_FROM_CONFIG_FILE,FINGERPRINT_FROM_CONFIG_FILE</Parameters>
 			</Table>
 		</NewDataSet>
-		<ScriptFolder>
-			<NewDataSet>
-				<Table>
-					<FolderID>193</FolderID>
-					<ParentID>1</ParentID>
-					<Name>Umbrella by OpenDNS</Name>
-				</Table>
-			</NewDataSet>
-		</ScriptFolder>
-		<ScriptFolder>
-			<NewDataSet>
-				<Table>
-					<FolderID>1</FolderID>
-					<ParentID>0</ParentID>
-					<Name>Software</Name>
-				</Table>
-			</NewDataSet>
-		</ScriptFolder>
 	</PackedScript>
 </LabTech_Expansion>
