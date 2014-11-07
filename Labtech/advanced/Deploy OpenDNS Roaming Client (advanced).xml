@@ -1,0 +1,117 @@
+﻿<LabTech_Expansion
+	Version="60.239"
+	Name="LabTech Script Expansion"
+	Type="PackedScript">
+	<PackedScript>
+		<NewDataSet>
+			<Table>
+				<ScriptId>0</ScriptId>
+				<FolderId>0</FolderId>
+				<ScriptName>Deploy OpenDNS Roaming Client (advanced)</ScriptName>
+				<ScriptNotes>Created by Jason Phelps, Sales Engineer, MSP at OpenDNS [jphelps@opendns.com]
+
+This script is for the OpenDNS Roaming Client deployment.  This script uses Global Variables rather than prompts for the installer.  This allows full automation of the installation of the Roaming Client.  The installation string hides the UI and the Add/Remove Programs entry by default.  Removing the `HIDE_UI` or `HIDE_ARP` value(s) can modify the level of visibility of the Roaming Client.
+
+See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more information.
+</ScriptNotes>
+				<Permission>0,</Permission>
+				<EditPermission>0,</EditPermission>
+				<ComputerScript>1</ComputerScript>
+				<LocationScript>1</LocationScript>
+				<MaintenanceScript>0</MaintenanceScript>
+				<FunctionScript>0</FunctionScript>
+				<LicenseData>H4sIAAAAAAAEAO29B2AcSZYlJi9tynt/SvVK1+B0oQiAYBMk2JBAEOzBiM3mkuwdaUcjKasqgcplVmVdZhZAzO2dvPfee++999577733ujudTif33/8/XGZkAWz2zkrayZ4hgKrIHz9+fB8/Ih4/L6b5ssmfZm129PjN9So/2n18l38+frVenlTrZZvXRzuP73p/PT59typqvJMffTefLfNmll2P0qf5NF9M8jrdeTBK93Z2d9O9R/d2Hu08SF9+8fiu987j19O6WLU/mddNUS0BPPxAv/98XcyOdnYf7t4/P59s35+dP9je3c33t7MHO5PtnZ37O/c/fbg72Xk4Ne/zC4/v+kP6jZP/B5P7e8biAAAA</LicenseData>
+				<ScriptData>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</ScriptData>
+				<ScriptVersion>1299702670</ScriptVersion>
+				<ScriptGuid>01915ffb-5df7-11e4-a70b-00505691b09c</ScriptGuid>
+				<ScriptFlags>0</ScriptFlags>
+				<Parameters></Parameters>
+			</Table>
+		</NewDataSet>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>0</ID>
+					<Form>3</Form>
+					<Name>OpenDNS_EnabledClient</Name>
+					<Sort>0</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>OpenDNS</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill>Check this box if this customer should be protected by OpenDNS.</Fill>
+					<LtGuid>5bc1ac2e-5df8-11e4-a70b-00505691b09c</LtGuid>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>0</ID>
+					<Form>3</Form>
+					<Name>OpenDNS_Org_ID</Name>
+					<Sort>3</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>0</FType>
+					<Section>OpenDNS</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill>Customer Organization ID from OpenDNS MSP Console &gt; Roaming Client &gt; Deploy</Fill>
+					<LtGuid>5c7c1c57-1404-11e4-b69e-00505691b09c</LtGuid>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>0</ID>
+					<Form>3</Form>
+					<Name>OpenDNS_User_ID</Name>
+					<Sort>2</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>0</FType>
+					<Section>OpenDNS</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill>OpenDNS UserID from MSP Console &gt; Roaming Client &gt; Deploy (integer)</Fill>
+					<LtGuid>4e246b60-1404-11e4-b69e-00505691b09c</LtGuid>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>0</ID>
+					<Form>3</Form>
+					<Name>OpenDNS_Org_Fingerprint</Name>
+					<Sort>4</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>0</FType>
+					<Section>OpenDNS</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill>Customer Organization Fingerprint from MSP Console &gt; Roaming Client &gt; Deploy</Fill>
+					<LtGuid>a93e1af6-1404-11e4-b69e-00505691b09c</LtGuid>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+		<ExtraDataField>
+			<NewDataSet>
+				<Table>
+					<ID>0</ID>
+					<Form>1</Form>
+					<Name>OpenDNS_No_URC</Name>
+					<Sort>1</Sort>
+					<NoBreak>0</NoBreak>
+					<FType>1</FType>
+					<Section>OpenDNS</Section>
+					<UnEditable>0</UnEditable>
+					<Collapsed>0</Collapsed>
+					<Fill>Check this box if this computer should not have the Roaming Client installed.</Fill>
+					<LtGuid>be0a2503-5876-11e4-a70b-00505691b09c</LtGuid>
+				</Table>
+			</NewDataSet>
+		</ExtraDataField>
+	</PackedScript>
+</LabTech_Expansion>
