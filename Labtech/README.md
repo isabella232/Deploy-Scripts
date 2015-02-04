@@ -20,15 +20,7 @@ Our <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">basi
 <table style="align:center"><colgroup><col width="624" /></colgroup>
 	<tbody>
 		<tr>
-<<<<<<< Updated upstream
 			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://support.opendns.com/entries/22198613">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
-=======
-<<<<<<< HEAD
-			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://support.opendns.com/entries/22198613">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration -> System Settings -> Internal Domains. For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
-=======
-			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://support.opendns.com/entries/22198613">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
->>>>>>> FETCH_HEAD
->>>>>>> Stashed changes
 			</td>
 		</tr>
 	</tbody>
@@ -101,7 +93,7 @@ When running the script, you will be prompted to enter the <a href="https://supp
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/Parameters_Prompt.png" border="0" alt="Prompt for parameters">
+				<img src="docs/Parameters-Prompt.png" border="0" alt="Prompt for parameters">
 			</td>
 		</tr>
 	</tbody>
