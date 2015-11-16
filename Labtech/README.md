@@ -99,7 +99,7 @@ When running the script, you will be prompted to enter the <a href="https://supp
 	</tbody>
 </table>
 
-The ```User_ID```, ```Org_ID``` and ```Org_FIngerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
+The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
 
 <table style="width:100%">
 	<tbody>
