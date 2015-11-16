@@ -4,7 +4,7 @@
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on 	Windows client operating systems,  such as Windows 7. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems as it has not been tested and is not supported.</p>
+				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on Windows client operating systems,  such as Windows 8 or 10. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems.</p>
 			</td>
 		</tr>
 	</tbody>
@@ -99,7 +99,7 @@ When running the script, you will be prompted to enter the <a href="https://supp
 	</tbody>
 </table>
 
-The User_ID, Org_ID and Org_FIngerprint parameters are found in the MSP Console under Roaming Client > Deploy.  Note the blue circle around the Export CSV icon, this allows you to export the information on the Deploy page.
+The ```User_ID```, ```Org_ID``` and ```Org_FIngerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
 
 <table style="width:100%">
 	<tbody>

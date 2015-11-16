@@ -4,7 +4,7 @@
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on 	Windows client operating systems,  such as Windows 7. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems as it has not been tested and is not supported.</p>
+				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on Windows client operating systems,  such as Windows 8 or 10. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems.</p>
 			</td>
 		</tr>
 	</tbody>
@@ -14,9 +14,7 @@
 
 The OpenDNS Roaming Client can be deployed using RMM tools, such as LabTech, by applying the <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-for-mass-deployment-MSP-">correct parameters</a> as part of the install string.  
 
-Our <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">basic script</a> prompts for the values to be used when deploying the Roaming Client.  The script outlined in this readme is more advanced and provides a more robust integration where you can automate deployment of the Roaming Client to managed workstations.
-
-From feedback we’ve received from our partners, and our continued efforts to make our products easier to deploy, we have developed a LabTech script that allows full automation of the process.  The script outlined in this document can be made part of your onboarding package, or part of scripts that run at regular intervals to maintain your customers.  The idea behind this script is for a “set and forget” deployment method that becomes a part of your workflow and allows you to just use your RMM to confirm that the Roaming Client is deployed to all workstations within your customers’ networks.
+The script outlined in this readme is more advanced than our <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">basic script</a> and provides a more robust integration where you can automate deployment of the Roaming Client to managed workstations.
 
 <div>
 <table style="align:center"><colgroup><col width="624" /></colgroup>
@@ -29,7 +27,7 @@ From feedback we’ve received from our partners, and our continued efforts to m
 </table>
 </div>
 
-The advanced script is available <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">here</a> and automatically creates the necessary Additional Fields in LabTech.  For those not familiar with GitHub, to import the script properly click on the name of the script in GitHub, and then click on the ‘Raw’ button as shown below:
+For those not familiar with GitHub, to import the script properly click on the name of the script in GitHub, and then click on the ‘Raw’ button as shown below:
 
 <table style="width:100%">
 	<tbody>
@@ -89,22 +87,6 @@ Now you should see the newly imported script in the root script folder, and you 
 	</tbody>
 </table>
 
-If you check in System Dashboard > Config > Configurations > Additional Fields, you should now see the OpenDNS_* fields as shown below.
-
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/Dashboard_AdditionalItems.png" border="0" alt="Additional Fields" style="vertical-align:middle">
-			</td>
-		</tr>
-		<tr>
-			<td>
-				<img src="docs/Dashboard_ComputerAddlInfo.png" border="0" alt="Scripts -> Third Party Applications" style="vertical-align:middle">
-			</td>
-		</tr>
-	</tbody>
-</table>
 
 At the Client and Computer level, the new fields appear for you to fill in with the appropriate OpenDNS values.  At the Client level, in order to allow the script to run, the “OpenDNS_EnabledClient” checkbox must be checked:
 
@@ -118,7 +100,7 @@ At the Client and Computer level, the new fields appear for you to fill in with 
 	</tbody>
 </table>
 
-The OpenDNS_User_ID, Org_ID and Org_FIngerprint are found in the MSP Console under Roaming Client > Deploy.  Note the blue circle around the Export CSV icon, this allows you to export the information on the Deploy page.
+The OpenDNS ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section. 
 
 <table style="width:100%">
 	<tbody>
