@@ -4,7 +4,7 @@
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p> This document reflects the changes made to Continuum's scripting interface in January 2015. This guide is meant to be a basic overview of deploying the OpenDNS Umbrella Roaming Client using your RMM tool.  OpenDNS is not able to provide comprehensive support for Continuum, but there is <a href="https://doccenter.itsupport247.net/">further documentation</a> available related to Scripts in Continuum.  A video walkthrough of the new scripting interface is also available from Continuum <a href="https://continuum.wistia.com/medias/msodbw37az?_hsenc=p2ANqtz--hEwsDe5a8lWERHNbpIaajhNoxBFnBcJk2sY_DoLGvEvhXt6xt0mSWcrsh-55x5ZXUIh8qvHt6Pp5DD2mQLlG2kRk98w&_hsmi=15651351">here</a>.</p>
+				<p> This guide is meant to be a basic overview of deploying the OpenDNS Umbrella Roaming Client using your RMM tool.  OpenDNS is not able to provide comprehensive support for Continuum, but there is <a href="https://doccenter.itsupport247.net/">further documentation</a> available related to Scripts in Continuum.</p>
 			</td>
 		</tr>
 	</tbody>
@@ -15,19 +15,19 @@
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on 	Windows client operating systems,  such as Windows 7 or 8. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems as it has not been tested and is not supported. A complete list of prerequisites are available <a href="https://support.opendns.com/entries/22198613-roaming-client-installation-setup-guide-prerequisites	">here</a>.</p>
+				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on Windows client operating systems,  such as Windows 8 or 10. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems. A complete list of prerequisites are available <a href="https://support.opendns.com/entries/22198613-roaming-client-installation-setup-guide-prerequisites">here</a>. This document assumes you've read these prerequisistes and have opened the appropriate firewall ports</p>
 			</td>
 		</tr>
 	</tbody>
 </table>
 </div>
-Continuum provides the ability to create script templates to deploy products that are not built-in to Continuum’s RMM tool.  This document provides the instructions to configure a template  to deploy the OpenDNS Roaming Client to your customer's computers. Although it is possible to simply create a single script and update it with customer information each time it's run, we recommend creating a deployment template for each individual customer with a naming convention such as ___%Client Name% OpenDNS Client Deployment___. This will allow easy deployment to customers in the future and allow scheduling of installs.
+Continuum provides the ability to create script templates to deploy products that are not built-in to Continuum’s RMM tool.  This document provides the instructions to configure a template  to deploy the OpenDNS Roaming Client to your customer's computers. We recommend creating a deployment script for each individual customer with a naming convention such as %Client Name% OpenDNS Client Deployment. This will allow easy deployment to customers in the future and allow scheduling of installs.
 
 <div>
 <table style="align:center"><colgroup><col width="624" /></colgroup>
 	<tbody>
 		<tr>
-			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://support.opendns.com/entries/22198613">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
+			<td bgcolor="#ccffff">Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
 			</td>
 		</tr>
 	</tbody>
@@ -65,30 +65,19 @@ Here you can define your own installer which we’ll use to deploy the Umbrella 
 	<tbody>
 		<tr>
 			<td>
-<b>NOTE</b>: The install string can be found in the OpenDNS MSP Console by clicking on Roaming > Deploy and click the download link (circled below in blue) to export the list of customers with the installation parameters.  The generated CSV includes the install string that is used in the "Application Details" section later in this document.  
+You can find the install string in the OpenDNS MSP Console by expanding the Customer Management card and clicking "show install string" (circled below).  Then, select the string beginning with ````/qn ORG_ID= ```` through the end.
 			</td>
-		</tr>
 		<tr>
 			<td>
-				<img src="docs/RoamingParameters.png" border="0" alt="Partner Application Installers">
+				<img src="docs/RoamingParameters.png" border="0" alt="Deployment Parameters">
 			</td>
 		</tr>
-	</tbody>
+	</tr>
+  </tbody>
 </table>
 </div>
 
-
-The install string uses three parameters to register the Roaming Client in the correct Dashboard. Those parameters are USER_ID, ORG_ID and ORG_FINGERPRINT (see screenshot above).  Note that the ```msiexec /i Setup.msi``` portion of the install string is not necessary in Continuum.
-
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/InstallString.png" border="0" alt="Parameters from OpenDNS Dashboard">
-			</td>
-		</tr>
-	</tbody>
-</table>
+The install string uses three parameters to register the Roaming Client in the correct Dashboard. Those parameters are ```USER_ID```,  ```ORG_ID``` and ```ORG_FINGERPRINT``` (see screenshot above).  Note that the ```msiexec /i Setup.msi``` portion of the install string is not necessary in Continuum, and will cause errors.
 
 More detail about the parameters and their definitions can be found in <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-MSP-Partners">this support article</a>.
 
@@ -108,9 +97,9 @@ First, we’ll create the installer.  To start, click “Create a Script From th
 
 Make the following changes:
 
-__Script Name__: *%Customer Name% OpenDNS Roaming Client Deployment* 
+__Script Name__: *%Customer Name%* OpenDNS Roaming Client Deployment
 
-__Script Description__:  *Installation script for the Umbrella Roaming Client for %Customer Name%*
+__Script Description__:  Installation script for the Umbrella Roaming Client for *%Customer Name%*
 
 ###“Download Details” Section
 Location:
@@ -127,14 +116,23 @@ Type of Application:
 Package/Exe name: 
 ```Setup.msi ```  __(note this is case-sensitive)__
 
-Installation Parameter: 
-```/qn ORG_ID=org_id ORG_FINGERPRINT=org_fingerprint USER_ID=user_id HIDE_UI=1 HIDE_ARP=1```
+Installation Parameter: __Use string from Customer Management shown below__
+
+<table style="align:center"><colgroup><col width="624" /></colgroup>
+	<tbody>
+		<tr>
+			<td>
+				<img src="docs/RoamingParameters.png" border="0" alt="Deployment Parameters">
+			</td>
+		</tr>
+  </tbody>
+</table>
 
 <table style="height: 70px; width: 100%">
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<strong>NOTE:</strong> If you are using the install string from the exported CSV file, be sure to remove <i><u>msiexec /i Setup.msi</i></u> when pasting. <p>If you want a visible install, you can change the HIDE_UI and HIDE_ARP to 0 instead of 1; more details about this and the other variables are available in <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-for-mass-deployment-MSP-">this support article</a>.
+				<strong>NOTE:</strong> If you want a visible installation, you can change the HIDE_UI and HIDE_ARP to 0 instead of 1; more details about this and the other variables are available in <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-for-mass-deployment-MSP-">this support article</a>.
 			</td>
 		</tr>
 	</tbody>
