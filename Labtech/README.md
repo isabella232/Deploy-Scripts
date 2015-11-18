@@ -14,7 +14,7 @@
 
 The OpenDNS Roaming Client can be deployed using RMM tools, such as LabTech, by applying the <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-for-mass-deployment-MSP-">correct parameters</a> as part of the install string.  
 
-Our <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">basic script</a> outlined in this readme prompts for the values to be used when deploying the Roaming Client. If you are looking for a more advanced and automated integration, please see our advanced script located <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech/advanced">here</a>. 
+Our basic script outlined in this readme prompts for the values to be used when deploying the Roaming Client. If you are looking for a more advanced and automated integration, please see our advanced script located <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech/advanced">here</a>. 
 
 <div>
 <table style="align:center"><colgroup><col width="624" /></colgroup>
@@ -27,7 +27,8 @@ Our <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">basi
 </table>
 </div>
 
-For those not familiar with GitHub, to import the script properly click on the name of the script in GitHub, and then click on the ‘Raw’ button as shown below:
+To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/Labtech/Deploy_OpenDNS_Umbrella_Client.xml).
+If you aren't familiar with GitHub, we recommend importing the script properly by clicking on the ‘Raw’ button as shown below:
 
 <table style="width:100%">
 	<tbody>

@@ -26,8 +26,8 @@ The script outlined in this readme is more advanced than our <a href="https://gi
 	</tbody>
 </table>
 </div>
-
-For those not familiar with GitHub, to import the script properly click on the name of the script in GitHub, and then click on the ‘Raw’ button as shown below:
+To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/Labtech/advanced/Deploy_OpenDNS_Umbrella_Client-advanced.xml).
+If you aren't familiar with GitHub, we recommend importing the script properly by clicking on the ‘Raw’ button as shown below:
 
 <table style="width:100%">
 	<tbody>
