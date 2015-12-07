@@ -102,6 +102,16 @@ At the Client and Computer level, the new fields appear for you to fill in with 
 
 The OpenDNS ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section. 
 
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<img src="docs/CustomerManagement.png" border="0" alt="Click the Caret">
+			</td>
+		</tr>
+	</tbody>
+</table>
+
 <table style="width:100%">
 	<tbody>
 		<tr>

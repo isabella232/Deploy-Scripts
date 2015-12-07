@@ -101,6 +101,15 @@ When running the script, you will be prompted to enter the <a href="https://supp
 </table>
 
 The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
+<table>
+	<tbody>
+		<tr>
+			<td>
+				<img src="docs/CustomerManagement.png" border="0" alt="Click the Caret">
+			</td>
+		</tr>
+	</tbody>
+</table>
 
 <table style="width:100%">
 	<tbody>

@@ -60,22 +60,30 @@ Once in the  Template section, you will need to search or browse to the option "
 </table>
 
 Here you can define your own installer which we’ll use to deploy the Umbrella Roaming Client.  There is a specific install string that is required for the script to ensure that your roaming clients check in with the correct customer Dashboard.  
-<div>
-<table style="align:center"><colgroup><col width="624" /></colgroup>
+
+You can find the install string in the OpenDNS MSP Console by expanding the Customer Management card (circled below) and clicking "show install string."  Then, select the string beginning with ````/qn ORG_ID= ```` through the end.
+
+<table>
 	<tbody>
 		<tr>
 			<td>
-You can find the install string in the OpenDNS MSP Console by expanding the Customer Management card and clicking "show install string" (circled below).  Then, select the string beginning with ````/qn ORG_ID= ```` through the end.
+				<img src="docs/CustomerManagement.png" border="0" alt="Click the Caret">
 			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table style="align:center"><colgroup><col width="624" /></colgroup>
+	<tbody>
 		<tr>
 			<td>
 				<img src="docs/RoamingParameters.png" border="0" alt="Deployment Parameters">
 			</td>
 		</tr>
-	</tr>
   </tbody>
 </table>
-</div>
+
 
 The install string uses three parameters to register the Roaming Client in the correct Dashboard. Those parameters are ```USER_ID```,  ```ORG_ID``` and ```ORG_FINGERPRINT``` (see screenshot above).  Note that the ```msiexec /i Setup.msi``` portion of the install string is not necessary in Continuum, and will cause errors.
 
