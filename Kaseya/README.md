@@ -1,4 +1,4 @@
-###Deploying OpenDNS Umbrella Roaming Client with LabTech
+###Deploying OpenDNS Umbrella Roaming Client with Kaseya
 <div>
 <table style="height: 100px; width: 100%">
 	<tbody>
@@ -12,9 +12,8 @@
 </div>
 
 
-The OpenDNS Roaming Client can be deployed using RMM tools, such as LabTech, by applying the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">correct parameters</a> as part of the install string.  
+The OpenDNS Roaming Client can be deployed using RMM tools, such as Kaseya, by applying the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">correct parameters</a> as part of the install string.  
 
-Our basic script outlined in this readme prompts for the values to be used when deploying the Roaming Client. If you are looking for a more advanced and automated integration, please see our advanced script located <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech/advanced">here</a>. 
 
 <div>
 <table style="align:center"><colgroup><col width="624" /></colgroup>
@@ -27,14 +26,14 @@ Our basic script outlined in this readme prompts for the values to be used when 
 </table>
 </div>
 
-To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/Labtech/Deploy_OpenDNS_Umbrella_Client.xml).
+To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/Kaseya/Umbrella_Roaming_Client.xml).
 If you aren't familiar with GitHub, we recommend importing the script properly by clicking on the ‘Raw’ button as shown below:
 
 <table style="width:100%">
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/GitHub_Raw.png" border="0" alt="Scripts -> Raw">
+				<img src="images/GitHub_Raw.png" border="0" alt="Scripts -> Raw">
 			</td>
 		</tr>
 	</tbody>
@@ -46,43 +45,43 @@ This will open the script into raw XML (see below) that you can copy/paste into 
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/GitHub_Raw2.png" border="0" alt="Raw XML"">
+				<img src="images/GitHub_Raw2.png" border="0" alt="Raw XML"">
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-Once you have the file saved, now we can import into LabTech.  To do that, open the LabTech Control Center, and click on Tools > Import > LT XML Expansion.
+Once you have the file saved, now we can import into Kaseya.  To do that, navigate to Agent Procedures > Manage Procedures > Schedule / Create. Here you can select a folder in which to import the script, and then click Import Folder/Procedure:
 
 <table style="width:100%">
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/Import_XML.png" border="0" alt="Parameters from OpenDNS Dashboard">
+				<img src="images/Import_XML.png" border="0" alt="Parameters from OpenDNS Dashboard">
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-You will be warned that importing items that already exist will result in them being updated, not new items created.  You can click ‘Yes’ on this warning.
+Choose the file to upload, and then click "Save."
 
 <table style="width:100%">
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/Import_XML_Warning.png" border="0" alt="Import Script">
+				<img src="images/Import_XML2.png" border="0" alt="Parameters from OpenDNS Dashboard">
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-Now you should see the newly imported script in the root script folder, and you can move it to your preferred location.
+Now you should see the newly imported script in the selected folder.
 
-<table style="width:100%">
+<table style="width:75%">
 	<tbody>
 		<tr>
 			<td>
-				<center><img src="docs/Script_Imported.png" border="0" alt="Script successfully imported!" style="vertical-align:middle"></center>
+				<center><img src="images/Script_Imported.png" border="0" alt="Script successfully imported!" style="vertical-align:middle"></center>
 			</td>
 		</tr>
 	</tbody>
@@ -94,7 +93,7 @@ When running the script, you will be prompted to enter the <a href="https://docs
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/Parameters-Prompt.png" border="0" alt="Prompt for parameters">
+				<img src="images/Parameters-Prompt.png" border="0" alt="Prompt for parameters">
 			</td>
 		</tr>
 	</tbody>
@@ -105,7 +104,7 @@ The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found i
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/CustomerManagement.png" border="0" alt="Click the Caret">
+				<img src="images/CustomerManagement.png" border="0" alt="Click the Caret">
 			</td>
 		</tr>
 	</tbody>
@@ -115,11 +114,13 @@ The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found i
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/RoamingParameters.png" border="0" alt="Script Parameters">
+				<img src="images/RoamingParameters.png" border="0" alt="Script Parameters">
 			</td>
 		</tr>
 	</tbody>
 </table>
+
+You have the option to hide the Add/Remove Programs entry and the System Tray icon by filling in the appropriate value.
 
 To confirm the Roaming Client is checking in, log into your OpenDNS Dashboard and choose the customer where you ran the deployment script.  Then navigate to Configuration -> Identities -> Roaming Computers.  If the computer is checking in properly, you’ll notice a green status icon as shown below.  
 
@@ -127,7 +128,7 @@ To confirm the Roaming Client is checking in, log into your OpenDNS Dashboard an
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/PolicyStatus.png" border="0" alt="Roaming Client in Dashboard">
+				<img src="images/PolicyStatus.png" border="0" alt="Roaming Client in Dashboard">
 			</td>
 		</tr>
 	</tbody>

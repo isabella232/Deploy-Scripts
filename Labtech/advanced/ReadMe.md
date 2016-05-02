@@ -12,7 +12,7 @@
 </div>
 
 
-The OpenDNS Roaming Client can be deployed using RMM tools, such as LabTech, by applying the <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-for-mass-deployment-MSP-">correct parameters</a> as part of the install string.  
+The OpenDNS Roaming Client can be deployed using RMM tools, such as LabTech, by applying the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">correct parameters</a> as part of the install string.  
 
 The script outlined in this readme is more advanced than our <a href="https://github.com/opendns/Deploy-Scripts/tree/master/Labtech">basic script</a> and provides a more robust integration where you can automate deployment of the Roaming Client to managed workstations.
 
@@ -20,7 +20,7 @@ The script outlined in this readme is more advanced than our <a href="https://gi
 <table style="align:center"><colgroup><col width="624" /></colgroup>
 	<tbody>
 		<tr>
-			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://support.opendns.com/entries/22198613">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration -> System Settings -> Internal Domains (Roaming). For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
+			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://docs.opendns.com/product/msp/prerequisites/">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://docs.opendns.com/product/msp/appendix-d-internal-domains/">this support article</a>.
 			</td>
 		</tr>
 	</tbody>
@@ -147,4 +147,4 @@ To confirm the Roaming Client is checking in, log into your OpenDNS Dashboard an
 	</tbody>
 </table>
 
-Computers without a green status icon are not checking in properly with OpenDNS.  Please check [this support article](https://support.opendns.com/entries/22182631) for more information on the status icons and troubleshooting.
+Computers without a green status icon are not checking in properly with OpenDNS.  Please check [this support article](https://docs.opendns.com/product/msp/appendix-a-status-and-functionality/) for more information on the status icons and troubleshooting.

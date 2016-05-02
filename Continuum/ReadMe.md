@@ -15,7 +15,7 @@
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on Windows client operating systems,  such as Windows 8 or 10. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems. A complete list of prerequisites are available <a href="https://support.opendns.com/entries/22198613-roaming-client-installation-setup-guide-prerequisites">here</a>. This document assumes you've read these prerequisistes and have opened the appropriate firewall ports</p>
+				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on Windows client operating systems,  such as Windows 8 or 10. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems. A complete list of prerequisites are available <a href="https://docs.opendns.com/product/msp/prerequisites/">here</a>. This document assumes you've read these prerequisistes and have opened the appropriate firewall ports</p>
 			</td>
 		</tr>
 	</tbody>
@@ -27,7 +27,7 @@ Continuum provides the ability to create script templates to deploy products tha
 <table style="align:center"><colgroup><col width="624" /></colgroup>
 	<tbody>
 		<tr>
-			<td bgcolor="#ccffff">Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://support.opendns.com/entries/22365052">this support article</a>.
+			<td bgcolor="#ccffff">Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://docs.opendns.com/product/msp/appendix-d-internal-domains/">this support article</a>.
 			</td>
 		</tr>
 	</tbody>
@@ -87,7 +87,7 @@ You can find the install string in the OpenDNS MSP Console by expanding the Cust
 
 The install string uses three parameters to register the Roaming Client in the correct Dashboard. Those parameters are ```USER_ID```,  ```ORG_ID``` and ```ORG_FINGERPRINT``` (see screenshot above).  Note that the ```msiexec /i Setup.msi``` portion of the install string is not necessary in Continuum, and will cause errors.
 
-More detail about the parameters and their definitions can be found in <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-MSP-Partners">this support article</a>.
+More detail about the parameters and their definitions can be found in <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">this support article</a>.
 
 ---
 
@@ -140,7 +140,7 @@ Installation Parameter: __Use string from Customer Management shown below__
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<strong>NOTE:</strong> If you want a visible installation, you can change the HIDE_UI and HIDE_ARP to 0 instead of 1; more details about this and the other variables are available in <a href="https://support.opendns.com/entries/55881150-Roaming-Client-Deployment-Parameters-for-mass-deployment-MSP-">this support article</a>.
+				<strong>NOTE:</strong> If you want a visible installation, you can change the HIDE_UI and HIDE_ARP to 0 instead of 1; more details about this and the other variables are available in <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">this support article</a>.
 			</td>
 		</tr>
 	</tbody>
@@ -228,4 +228,4 @@ To confirm the Roaming Client is checking in, log into your OpenDNS Dashboard an
 	</tbody>
 </table>
 
-Computers without a green status icon are not checking in properly with OpenDNS.  Please check [this support article](https://support.opendns.com/entries/22182631) for more information on the status icons and troubleshooting.
+Computers without a green status icon are not checking in properly with OpenDNS.  Please check [this support article](https://docs.opendns.com/product/msp/appendix-a-status-and-functionality/) for more information on the status icons and troubleshooting.
