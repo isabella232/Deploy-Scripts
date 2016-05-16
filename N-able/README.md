@@ -39,7 +39,7 @@ If you aren't familiar with GitHub, we recommend importing the script properly b
 	</tbody>
 </table>
 
-This will open the script into raw XML (see below) that you can copy/paste into your favorite text editor and save as an XML file.
+This will open the script into raw XML (see below) that you can copy/paste into your favorite text editor and save as a .AMP file.
 
 <table>
 	<tbody>
