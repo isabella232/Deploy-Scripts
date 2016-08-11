@@ -26,7 +26,7 @@ The OpenDNS Roaming Client can be deployed using RMM tools, such as N-able, by a
 </table>
 </div>
 
-To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/N-able/OpenDNSAgentDeploy.amp).
+To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/N-able/UmbrellaRoamingClient-install.amp).
 If you aren't familiar with GitHub, we recommend importing the script properly by clicking on the ‘Raw’ button as shown below:
 
 <table style="width:100%">
@@ -75,7 +75,7 @@ Choose the file to upload, and then click "OK."
 	</tbody>
 </table>
 
-To schedule the Automation Policy, navigate to the appropriate customer and click on Actions > Run an Automation Policy. Select "OpenDNS Deploy"  and you will see the screen below. You will be need to enter the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">parameters</a> found in the MSP Console.  
+To schedule the Automation Policy, navigate to the appropriate customer and click on Actions > Run an Automation Policy. Select "OpenDNS Umbrella RoamingClient"  and you will see the screen below. You will be need to enter the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">parameters</a> found in the MSP Console.  
 
 <div>
 <table style="height: 10px; width: 100%">
@@ -93,11 +93,13 @@ To schedule the Automation Policy, navigate to the appropriate customer and clic
 	<tbody>
 		<tr>
 			<td>
-				<img src="docs/SetParameters.png" border="0" alt="Prompt for parameters">
+				<img src="docs/SetParams.png" border="0" alt="Prompt for parameters">
 			</td>
 		</tr>
 	</tbody>
 </table>
+
+By default, this install will hide the Add/Remove Programs entry, as well as the Windows system tray icon.
 
 The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
 <table>
