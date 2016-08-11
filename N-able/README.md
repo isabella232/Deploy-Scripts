@@ -99,6 +99,18 @@ To schedule the Automation Policy, navigate to the appropriate customer and clic
 	</tbody>
 </table>
 
+<div>
+<table style="height: 10px; width: 100%">
+	<tbody>
+		<tr>
+			<td bgcolor="#ccffff">
+				<p><strong>Support Operating Systems:</strong><br>This script will exit if a Windows Server operating system is detected, as it is not supported.</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+
 By default, this install will hide the Add/Remove Programs entry, as well as the Windows system tray icon.
 
 The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
