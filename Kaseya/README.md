@@ -1,10 +1,13 @@
-###Deploying OpenDNS Umbrella Roaming Client with Kaseya
+###Deploying Cisco Umbrella Roaming Client with Kaseya
+
+The Cisco Umbrella roaming client can be deployed using RMM tools, such as Kaseya, by applying the <a href="https://docs.umbrella.com/product/msp/automated-deployment/#section-deployment-parameters">correct parameters</a> as part of the install string.  
+
 <div>
 <table style="height: 100px; width: 100%">
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p><strong>NOTE:</strong> This document is specific to deploying the OpenDNS Roaming Client on Windows client operating systems,  such as Windows 8 or 10. OpenDNS does not support the installation of the Roaming Client on Windows Server operating systems.</p>
+				<p><strong>NOTE:</strong> This document is specific to deploying the Umbrella roaming client on Windows client operating systems, such as Windows 8 or 10. The installation of the Umbrella roaming client on Windows Server operating systems is not supported. A complete list of prerequisites are available <a href="https://docs.umbrella.com/product/msp/prerequisites/">here</a>. This document assumes you've read these prerequisites and have opened the appropriate firewall ports.</p>
 			</td>
 		</tr>
 	</tbody>
@@ -12,14 +15,11 @@
 </div>
 
 
-The OpenDNS Roaming Client can be deployed using RMM tools, such as Kaseya, by applying the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">correct parameters</a> as part of the install string.  
-
-
 <div>
 <table style="align:center"><colgroup><col width="624" /></colgroup>
 	<tbody>
 		<tr>
-			<td bgcolor="#ccffff">This document assumes that you have read the prerequisites for the Roaming Client and all necessary firewall ports have been opened as documented in <a href="https://docs.opendns.com/product/msp/prerequisites/">this support article.</a>  Please note that all customer Internal Domains must be entered first before deploying the Roaming Client.  Failure to do so will cause problems with accessing internal resources. This is done in the Dashboard by navigating to Configuration > System Settings > Internal Domains. For details about what needs to be in this list, please see <a href="https://docs.opendns.com/product/msp/appendix-d-internal-domains/">this support article</a>.
+			<td bgcolor="#ccffff">You must enter all customer internal domains before deploying the Umbrella roaming client. Failure to do so will cause problems with accessing internal resources. To do this, in the Umbrella dashboard navigate to Settings > Internal Domains and enter domains as required. For details about what needs to be in this list, please see  <a href="https://docs.umbrella.com/product/msp/appendix-d-internal-domains/">this support article</a>.
 			</td>
 		</tr>
 	</tbody>
@@ -27,7 +27,7 @@ The OpenDNS Roaming Client can be deployed using RMM tools, such as Kaseya, by a
 </div>
 
 To download the script, you can find the [full script here](https://github.com/opendns/Deploy-Scripts/blob/master/Kaseya/Umbrella_Roaming_Client.xml).
-If you aren't familiar with GitHub, we recommend importing the script properly by clicking on the ‘Raw’ button as shown below:
+If you aren't familiar with GitHub, we recommend importing the script properly by clicking <strong>Raw</strong>.
 
 <table style="width:100%">
 	<tbody>
@@ -87,7 +87,7 @@ Now you should see the newly imported script in the selected folder.
 	</tbody>
 </table>
 
-When running the script, you will be prompted to enter the <a href="https://docs.opendns.com/product/msp/automated-deployment/#section-deployment-parameters">parameters</a> found in the MSP Console.  
+When running the script, you will be prompted to enter the <a href="https://docs.umbrella.com/product/msp/automated-deployment/#section-deployment-parameters">parameters</a> found in the Umbrella for MSPs Console.  
 
 <table style="width:100%">
 	<tbody>
@@ -99,7 +99,7 @@ When running the script, you will be prompted to enter the <a href="https://docs
 	</tbody>
 </table>
 
-The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found in the MSP Console under the Customer Management card in the _Deployment Parameters_ section.  
+In the Umbrella for MSPs Console you can find the ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters by navigating to Customer Management and expanding a customer.
 <table>
 	<tbody>
 		<tr>
@@ -109,7 +109,7 @@ The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found i
 		</tr>
 	</tbody>
 </table>
-
+Parameters are located in the _Deployment Parameters_ section.  
 <table style="width:100%">
 	<tbody>
 		<tr>
@@ -122,16 +122,16 @@ The ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters are found i
 
 You have the option to hide the Add/Remove Programs entry and the System Tray icon by filling in the appropriate value.
 
-To confirm the Roaming Client is checking in, log into your OpenDNS Dashboard and choose the customer where you ran the deployment script.  Then navigate to Configuration -> Identities -> Roaming Computers.  If the computer is checking in properly, you’ll notice a green status icon as shown below.  
+To confirm the roaming client is checking in, log into your Umbrella Dashboard and choose the customer where you ran the deployment script. Navigate to Identities > Roaming Computers, and search for the individual host names where the script should have been run.  If the computer is checking in properly, you’ll notice a green status icon as shown below:  
 
 <table style="width:100%">
 	<tbody>
 		<tr>
 			<td>
-				<img src="images/PolicyStatus.png" border="0" alt="Roaming Client in Dashboard">
+				<img src="images/PolicyStatus.png" border="0" alt="roaming client in Dashboard">
 			</td>
 		</tr>
 	</tbody>
 </table>
 
-Computers without a green status icon are not checking in properly with OpenDNS.  Please check [this support article](https://docs.opendns.com/product/msp/appendix-a-status-and-functionality/) for more information on the status icons and troubleshooting.
+Computers without a green status icon are not checking in properly with Umbrella.  Please check [this support article](https://docs.umbrella.com/product/msp/appendix-a-status-and-functionality/) for more information on the status icons and troubleshooting.

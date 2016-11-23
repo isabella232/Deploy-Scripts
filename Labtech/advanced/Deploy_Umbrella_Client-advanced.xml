@@ -7,10 +7,10 @@
 			<Table>
 				<ScriptId>0</ScriptId>
 				<FolderId>0</FolderId>
-				<ScriptName>Deploy OpenDNS Roaming Client (advanced)</ScriptName>
-				<ScriptNotes>Created by Jason Phelps, Sales Engineer, MSP at OpenDNS [jphelps@opendns.com]
+				<ScriptName>Deploy Umbrella Roaming Client (advanced)</ScriptName>
+				<ScriptNotes>Created by Jason Phelps, Sales Engineer, MSP at OpenDNS (now part of Cisco) [jasphelp@cisco.com]
 
-This script is for the OpenDNS Roaming Client deployment.  This script uses Global Variables rather than prompts for the installer.  This allows full automation of the installation of the Roaming Client.  The installation string hides the UI and the Add/Remove Programs entry by default.  Removing the `HIDE_UI` or `HIDE_ARP` value(s) can modify the level of visibility of the Roaming Client.
+This script is for the Umbrella roaming client deployment.  This script uses Extra Data Fields (EDFs) rather than prompts for the installer.  This allows full automation of the installation of the roaming client.  The installation string hides the UI and the Add/Remove Programs entry by default.  Removing the `HIDE_UI` or `HIDE_ARP` value(s) can modify the level of visibility of the Roaming Client.
 
 See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more information.
 </ScriptNotes>
@@ -40,7 +40,7 @@ See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more infor
 					<Section>OpenDNS</Section>
 					<UnEditable>0</UnEditable>
 					<Collapsed>0</Collapsed>
-					<Fill>Check this box if this customer should be protected by OpenDNS.</Fill>
+					<Fill>Check this box if this customer should be protected by Umbrella.</Fill>
 					<LtGuid>5bc1ac2e-5df8-11e4-a70b-00505691b09c</LtGuid>
 				</Table>
 			</NewDataSet>
@@ -57,7 +57,7 @@ See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more infor
 					<Section>OpenDNS</Section>
 					<UnEditable>0</UnEditable>
 					<Collapsed>0</Collapsed>
-					<Fill>Customer Organization ID from OpenDNS MSP Console &gt; Roaming Client &gt; Deploy</Fill>
+					<Fill>Customer Organization ID from Umbrella MSP Console &gt; Roaming Client &gt; Deploy</Fill>
 					<LtGuid>5c7c1c57-1404-11e4-b69e-00505691b09c</LtGuid>
 				</Table>
 			</NewDataSet>
@@ -74,7 +74,7 @@ See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more infor
 					<Section>OpenDNS</Section>
 					<UnEditable>0</UnEditable>
 					<Collapsed>0</Collapsed>
-					<Fill>OpenDNS UserID from MSP Console &gt; Roaming Client &gt; Deploy (integer)</Fill>
+					<Fill>Umbrella UserID from MSP Console &gt; Roaming Client &gt; Deploy (integer)</Fill>
 					<LtGuid>4e246b60-1404-11e4-b69e-00505691b09c</LtGuid>
 				</Table>
 			</NewDataSet>

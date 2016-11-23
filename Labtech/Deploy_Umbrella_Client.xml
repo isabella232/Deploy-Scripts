@@ -1,4 +1,4 @@
-﻿<LabTech_Expansion
+<LabTech_Expansion
 	Version="60.239"
 	Name="LabTech Script Expansion"
 	Type="PackedScript">
@@ -7,8 +7,8 @@
 			<Table>
 				<ScriptId>0</ScriptId>
 				<FolderId>0</FolderId>
-				<ScriptName>Deploy OpenDNS Roaming Client</ScriptName>
-				<ScriptNotes>Created by Jason Phelps, Sales Engineer, MSP at OpenDNS [jphelps@opendns.com]
+				<ScriptName>Deploy Umbrella Roaming Client</ScriptName>
+				<ScriptNotes>Created by Jason Phelps, Sales Engineer, MSP at OpenDNS (now part of Cisco) [jasphelp@cisco.com]
 
 This script is for the OpenDNS Roaming Client deployment.  This script uses prompts for the correct parameters that are used with the installer.    
 
@@ -16,7 +16,7 @@ The installation string hides the UI and the Add/Remove Programs entry by defaul
 
 See https://github.com/opendns/Deploy-Scripts/tree/master/Labtech for more information on the LabTech script.
 
-See https://support.opendns.com/entries/55881150 for more information on the roaming client parameters.</ScriptNotes>
+See https://docs.umbrella.com/product/msp/automated-deployment-instructions/#section-deployment-parameters for more information on the roaming client parameters.</ScriptNotes>
 				<Permission>0,</Permission>
 				<EditPermission>0,</EditPermission>
 				<ComputerScript>1</ComputerScript>
