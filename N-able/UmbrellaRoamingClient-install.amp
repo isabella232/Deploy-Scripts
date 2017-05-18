@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="7e836a07-95cb-485b-9cc5-15a1fe6f8228" Name="OpenDNS Umbrella RoamingClient" Description="aHR0cHM6Ly9kb2NzLm9wZW5kbnMuY29tL3Byb2R1Y3QvbXNwL24tYWJsZS8NCiB8DQoNClRoaXMgc2NyaXB0IGRvd25sb2FkcyB0aGUgDQpPcGVuRE5TIFVtYnJlbGxhIFJvYW1pbmcgQ2xpZW50IGFuZCANCmluc3RhbGxzIGl0IHVzaW5nIHBhcmFtZXRlcnMgcHJvdmlkZWQuDQoNClRoZSBkZXBsb3ltZW50IHBhcmFtZXRlcnMgYXJlIGZvdW5kIGluIHRoZQ0KTVNQIENvbnNvbGUgdW5kZXIgQ3VzdG9tZXIgTWFuYWdlbWVudC4=" Version="2.0.4.37" RemoteCategory="0" ExecutionType="CurrentLoggedOnUser" PS3ObjectCount="0">
-  <Object ID="{9662ea82-0f65-4cc7-a432-da797194cc89}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;UserID&quot; Label=&quot;Umbrella User ID&quot; ParameterType=&quot;string&quot; Value=&quot;Insert User ID Here&quot; /&gt;&lt;Parameter ParameterName=&quot;OrganizationID&quot; Label=&quot;Umbrella Organization ID&quot; ParameterType=&quot;string&quot; Value=&quot;Insert OrganizationID Here&quot; /&gt;&lt;Parameter ParameterName=&quot;Fingerprint&quot; Label=&quot;Umbrella Org Fingerprint&quot; ParameterType=&quot;string&quot; Value=&quot;Insert Fingerprint Here&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><Policy ID="7e836a07-95cb-485b-9cc5-15a1fe6f8228" Name="Umbrella Roaming Client" Description="aHR0cHM6Ly9kb2NzLnVtYnJlbGxhLmNvbS9wcm9kdWN0L21zcC9uLWFibGUtaW5zdHJ1Y3Rpb25zLwp8IApUaGlzIHNjcmlwdCBkb3dubG9hZHMgdGhlIApVbWJyZWxsYSBSb2FtaW5nIENsaWVudCBhbmQgCmluc3RhbGxzIGl0IHVzaW5nIHBhcmFtZXRlcnMgcHJvdmlkZWQuCgpUaGUgZGVwbG95bWVudCBwYXJhbWV0ZXJzIGFyZSBmb3VuZCBpbiB0aGUKTVNQIENvbnNvbGUgdW5kZXIgQ3VzdG9tZXIgTWFuYWdlbWVudC4=" Version="2.1.2.19" RemoteCategory="0" ExecutionType="CurrentLoggedOnUser" PS3ObjectCount="0">
+  <Object ID="{f18a9ad9-bdea-4af8-a49a-325e0231cbc4}" Type="{B6FA6D8B-EEAA-47A6-8463-7F9A4F5BBB6E}" Data="&lt;xml&gt;&lt;Parameters&gt;&lt;Parameter ParameterName=&quot;UserID&quot; Label=&quot;Umbrella User ID&quot; ParameterType=&quot;string&quot; Value=&quot;Insert User ID Here&quot; /&gt;&lt;Parameter ParameterName=&quot;OrganizationID&quot; Label=&quot;Umbrella Organization ID&quot; ParameterType=&quot;string&quot; Value=&quot;Insert OrganizationID Here&quot; /&gt;&lt;Parameter ParameterName=&quot;Fingerprint&quot; Label=&quot;Umbrella Org Fingerprint&quot; ParameterType=&quot;string&quot; Value=&quot;Insert Fingerprint Here&quot; /&gt;&lt;/Parameters&gt;&lt;/xml&gt;" />
   <LinkManager xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/PolicyExecutor">
     <hashset xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" />
   </LinkManager>
-  <Activity mc:Ignorable="sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Activity mc:Ignorable="sads sap" x:Class="Policy Builder" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PolicyExecutor;assembly=PolicyExecutionEngine" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <x:Members>
       <x:Property Name="PolicyGUID" Type="InArgument(x:String)" />
     </x:Members>
-    <sap:VirtualizedContainerService.HintSize>749,2507</sap:VirtualizedContainerService.HintSize>
+    <sap:VirtualizedContainerService.HintSize>727.333333333333,902</sap:VirtualizedContainerService.HintSize>
     <mva:VisualBasic.Settings>Assembly references and imported namespaces serialized as XML namespaces</mva:VisualBasic.Settings>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -15,60 +15,131 @@
         <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <p:PolicySequence DisplayName="Umbrella Roaming Client" sap:VirtualizedContainerService.HintSize="749,2507" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
+    <p:PolicySequence DisplayName="Umbrella Roaming Client" sap:VirtualizedContainerService.HintSize="942,1230.66666666667" mva:VisualBasic.Settings="Assembly references and imported namespaces serialized as XML namespaces">
       <p:PolicySequence.Activities>
-        <p:GetOSType AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" DisplayName="Get OS Type" sap:VirtualizedContainerService.HintSize="713,81" Moniker="7c56088c-d171-435a-b952-1b0aa32cf00b" Result="[GetOSType_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="GetOSType" Value="[GetOSType_Value]" m_bTextLinkChange="False">
+        <p:GetOSType AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" DisplayName="Get OS Type" sap:VirtualizedContainerService.HintSize="906,80" Moniker="7c56088c-d171-435a-b952-1b0aa32cf00b" Result="[GetOSType_Result]" ResultString="[GetOSType_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="GetOSType" Value="[GetOSType_Value]" m_bTextLinkChange="False">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </p:GetOSType>
-        <p:IfElse Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" Condition="contains" Condition_DisplayArg="contains" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="713,2161" Moniker="3665dee6-c24b-48ed-9bdc-3a2685677e80" Result="[IfElse_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="Server" Value_Type="x:String" Variable="[GetOSType_Value]" Variable_DisplayArg="Get OS Type.Value" Variable_Type="x:String" m_bTextLinkChange="False">
+        <p:IfElse Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" Condition="contains" Condition_DisplayArg="contains" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="906,917.333333333333" Moniker="3665dee6-c24b-48ed-9bdc-3a2685677e80" Result="[IfElse_Result]" ResultString="[IfElse_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="Server" Value_Type="x:String" Variable="[GetOSType_Value]" Variable_DisplayArg="Get OS Type.Value" Variable_Type="x:String" m_bTextLinkChange="False">
           <p:IfElse.ElseOption>
-            <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="681,1710" Name="SequenceActivity">
+            <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="688,717.333333333333" Name="SequenceActivity">
               <p:SequenceActivity.Activities>
-                <p:CreateFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Create Folder" Folder="c:\temp\opendns\" FolderInfo="[CreateFolder_FolderInfo]" Folder_DisplayArg="c:\temp\opendns\" sap:VirtualizedContainerService.HintSize="643,88" Moniker="c3439782-9009-48db-aa61-9dc12e64819a" Result="[CreateFolder_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="CreateFolder" m_bTextLinkChange="False" />
-                <p:DownloadFileFromURL OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Download File from URL" sap:VirtualizedContainerService.HintSize="643,160" Moniker="d727ed4c-3710-4756-8321-f11c097f7374" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" RemoteFileURL="http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi" RemoteFileURL_DisplayArg="http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi" Result="[DownloadFileFromURL_Result]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="c:\temp\opendns\Setup.msi" SaveAsFileName_DisplayArg="c:\temp\opendns\Setup.msi" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" />
-                <p:FormatString Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="ADD OrgID and Fingerprint - Format String" FormattedString="[FormatString_FormattedString]" sap:VirtualizedContainerService.HintSize="643,160" Input0="[OrganizationID]" Input0_DisplayArg="Input Parameters.Umbrella Organization ID" Input1="[Fingerprint]" Input1_DisplayArg="Input Parameters.Umbrella Org Fingerprint" Moniker="508e103e-1195-46d8-97e6-401b789042bb" Result="[FormatString_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text=" /i c:\temp\opendns\Setup.msi /qn ORG_ID={0} ORG_FINGERPRINT={1}" Text_DisplayArg=" /i c:\temp\opendns\Setup.msi /qn ORG_ID={0} ORG_FINGERPRINT={1}" TypeName="FormatString" m_bTextLinkChange="False">
+                <p:IsServiceRunning Service_Item="{x:Null}" Service_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.1.2.19, Culture=neutral, PublicKeyToken=null" Conditional="[IsServiceRunning_Conditional]" DisplayName="Is Service Running" sap:VirtualizedContainerService.HintSize="650,88" Moniker="abff44d9-2909-4e0e-92e0-d0ce4f32b1a7" Result="[IsServiceRunning_Result]" ResultString="[IsServiceRunning_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Service="Umbrella_RC" Service_DisplayArg="Umbrella_RC" TypeName="IsServiceRunning" m_bTextLinkChange="False" />
+                <p:IfElse Condition_Item="{x:Null}" Condition_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.1.2.19, Culture=neutral, PublicKeyToken=null" Condition="equals" Condition_DisplayArg="equals" DisplayName="If/Else" sap:VirtualizedContainerService.HintSize="650,438.666666666667" Moniker="bb39fc87-892c-4e7a-887c-740b915e045c" Result="[IfElse_Result_1]" ResultString="[IfElse_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="None" TypeName="IfElse" Value_DisplayArg="True" Value_Type="x:String" Variable="[IsServiceRunning_Conditional]" Variable_DisplayArg="Is Service Running.Conditional" Variable_Type="x:String" m_bTextLinkChange="False">
+                  <p:IfElse.ElseOption>
+                    <p:SequenceActivity DisplayName="Else" sap:VirtualizedContainerService.HintSize="174,80" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:CreateFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Create Folder" Folder="c:\temp\opendns\" FolderInfo="[CreateFolder_FolderInfo]" Folder_DisplayArg="c:\temp\opendns\" sap:VirtualizedContainerService.HintSize="656,88" Moniker="c3439782-9009-48db-aa61-9dc12e64819a" Result="[CreateFolder_Result]" ResultString="[CreateFolder_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="CreateFolder" m_bTextLinkChange="False" />
+                        <p:DownloadFileFromURL OverwriteExistingFile_Item="{x:Null}" OverwriteExistingFile_ItemProp="{x:Null}" RemoteFileURL_Item="{x:Null}" RemoteFileURL_ItemProp="{x:Null}" SaveAsFileName_Item="{x:Null}" SaveAsFileName_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Download File from URL" sap:VirtualizedContainerService.HintSize="656,160" Moniker="d727ed4c-3710-4756-8321-f11c097f7374" OverwriteExistingFile="True" OverwriteExistingFile_DisplayArg="true" RemoteFileURL="http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi" RemoteFileURL_DisplayArg="http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi" Result="[DownloadFileFromURL_Result]" ResultString="[DownloadFileFromURL_ResultString]" RunAsCurrentLoggedOnUser="False" SaveAsFileName="c:\temp\opendns\Setup.msi" SaveAsFileName_DisplayArg="c:\temp\opendns\Setup.msi" ScriptExecutionMethod="ExecuteDebug" TypeName="DownloadFileFromURL" m_bTextLinkChange="False" />
+                        <p:FormatString Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="ADD OrgID and Fingerprint - Format String" FormattedString="[FormatString_FormattedString]" sap:VirtualizedContainerService.HintSize="656,160" Input0="[OrganizationID]" Input0_DisplayArg="Input Parameters.Umbrella Organization ID" Input1="[Fingerprint]" Input1_DisplayArg="Input Parameters.Umbrella Org Fingerprint" Moniker="508e103e-1195-46d8-97e6-401b789042bb" Result="[FormatString_Result]" ResultString="[FormatString_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text=" /i c:\temp\opendns\Setup.msi /qn ORG_ID={0} ORG_FINGERPRINT={1}" Text_DisplayArg=" /i c:\temp\opendns\Setup.msi /qn ORG_ID={0} ORG_FINGERPRINT={1}" TypeName="FormatString" m_bTextLinkChange="False">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </p:FormatString>
+                        <p:FormatString Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Add Umbrella UserID - Format String" FormattedString="[FormatString_FormattedString_1]" sap:VirtualizedContainerService.HintSize="656,160" Input0="[FormatString_FormattedString]" Input0_DisplayArg="ADD OrgID and Fingerprint - Format String.FormattedString" Input1="[UserID]" Input1_DisplayArg="Input Parameters.Umbrella User ID" Moniker="334d02d3-68c1-49fb-965a-323aa4297aa6" Result="[FormatString_Result_1]" ResultString="[FormatString_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0} USER_ID={1} HIDE_UI=1 HIDE_ARP=1" Text_DisplayArg="{}{0} USER_ID={1} HIDE_UI=1 HIDE_ARP=1" TypeName="FormatString" m_bTextLinkChange="False" />
+                        <p:SetEnvironmentVariable Type_Item="{x:Null}" Type_ItemProp="{x:Null}" UserName="{x:Null}" UserName_DisplayArg="{x:Null}" UserName_Item="{x:Null}" UserName_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Set Environment Variable" sap:VirtualizedContainerService.HintSize="656,196" Moniker="90d2aa72-3352-42a8-9798-2e55eb4778f4" Result="[SetEnvironmentVariable_Result]" ResultString="[SetEnvironmentVariable_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Type="Machine" TypeName="SetEnvironmentVariable" Type_DisplayArg="Machine" Value="[FormatString_FormattedString_1]" Value_DisplayArg="Add Umbrella UserID - Format String.FormattedString" Variable="UmbrellaConcatString" Variable_DisplayArg="UmbrellaConcatString" m_bTextLinkChange="False" />
+                        <p:GetEnvironmentVariable Type_Item="{x:Null}" Type_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Full Install String - Get Environment Variable" sap:VirtualizedContainerService.HintSize="656,124" Moniker="2001381d-7cc5-4162-820f-dacdb8e03d2b" Result="[GetEnvironmentVariable_Result]" ResultString="[GetEnvironmentVariable_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Type="Machine" TypeName="GetEnvironmentVariable" Type_DisplayArg="Machine" Value="[GetEnvironmentVariable_Value]" Variable="UmbrellaConcatString" Variable_DisplayArg="UmbrellaConcatString" m_bTextLinkChange="False" />
+                        <p:RunProgram Arguments_Item="{x:Null}" Arguments_ItemProp="{x:Null}" Program_Item="{x:Null}" Program_ItemProp="{x:Null}" WaitForCompletion_Item="{x:Null}" WaitForCompletion_ItemProp="{x:Null}" WindowType_Item="{x:Null}" WindowType_ItemProp="{x:Null}" WorkingDirectory_Item="{x:Null}" WorkingDirectory_ItemProp="{x:Null}" Arguments="[GetEnvironmentVariable_Value]" Arguments_DisplayArg="Full Install String - Get Environment Variable.Value" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Run Program" sap:VirtualizedContainerService.HintSize="656,232" Moniker="7304120d-7817-4acd-ad37-043f851f0828" ProcessID="[RunProgram_ProcessID]" Program="msiexec.exe" Program_DisplayArg="msiexec.exe" Result="[RunProgram_Result]" ResultString="[RunProgram_ResultString]" RunAsCurrentLoggedOnUser="True" ScriptExecutionMethod="None" TypeName="RunProgram" WaitForCompletion="True" WaitForCompletion_DisplayArg="" WindowType="Hidden" WindowType_DisplayArg="Hidden" WorkingDirectory="c:\temp\opendns\" WorkingDirectory_DisplayArg="c:\temp\opendns\" m_bTextLinkChange="False" />
+                        <p:DeleteFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" Force_Item="{x:Null}" Force_ItemProp="{x:Null}" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" DisplayName="Delete Folder" Folder="c:\temp\opendns\" Folder_DisplayArg="c:\temp\opendns\" Force="True" Force_DisplayArg="" sap:VirtualizedContainerService.HintSize="656,160" Moniker="d1e586c0-5728-4000-bf32-9987a2ab2b22" Recurse="True" Recurse_DisplayArg="true" Result="[DeleteFolder_Result]" ResultString="[DeleteFolder_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="DeleteFolder" m_bTextLinkChange="False" />
+                        <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.1.2.19, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="656,88" LogMessage="[Log_LogMessage_2]" Message="Umbrella roaming client Installed!" Message_DisplayArg="Umbrella roaming client Installed!" Moniker="c8e1f63d-608d-4cc7-9c00-f397c7cfea19" Result="[Log_Result_2]" ResultString="[Log_ResultString_2]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="CreateFolder_FolderInfo" />
+                        <Variable x:TypeArguments="x:Double" Name="CreateFolder_Result" />
+                        <Variable x:TypeArguments="x:String" Name="CreateFolder_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="DownloadFileFromURL_Result" />
+                        <Variable x:TypeArguments="x:String" Name="DownloadFileFromURL_ResultString" />
+                        <Variable x:TypeArguments="x:String" Name="FormatString_FormattedString" />
+                        <Variable x:TypeArguments="x:Double" Name="FormatString_Result" />
+                        <Variable x:TypeArguments="x:String" Name="FormatString_ResultString" />
+                        <Variable x:TypeArguments="x:String" Name="FormatString_FormattedString_1" />
+                        <Variable x:TypeArguments="x:Double" Name="FormatString_Result_1" />
+                        <Variable x:TypeArguments="x:String" Name="FormatString_ResultString_1" />
+                        <Variable x:TypeArguments="x:Double" Name="SetEnvironmentVariable_Result" />
+                        <Variable x:TypeArguments="x:String" Name="SetEnvironmentVariable_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="GetEnvironmentVariable_Result" />
+                        <Variable x:TypeArguments="x:String" Name="GetEnvironmentVariable_Value" />
+                        <Variable x:TypeArguments="x:String" Name="GetEnvironmentVariable_ResultString" />
+                        <Variable x:TypeArguments="x:String" Name="RunProgram_ProcessID" />
+                        <Variable x:TypeArguments="x:Double" Name="RunProgram_Result" />
+                        <Variable x:TypeArguments="x:String" Name="RunProgram_ResultString" />
+                        <Variable x:TypeArguments="x:Double" Name="DeleteFolder_Result" />
+                        <Variable x:TypeArguments="x:String" Name="DeleteFolder_ResultString" />
+                        <Variable x:TypeArguments="x:String" Name="Log_LogMessage_2" />
+                        <Variable x:TypeArguments="x:Double" Name="Log_Result_2" />
+                        <Variable x:TypeArguments="x:String" Name="Log_ResultString_2" />
+                      </p:SequenceActivity.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p:SequenceActivity>
+                  </p:IfElse.ElseOption>
+                  <p:IfElse.IfOption>
+                    <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="432,238.666666666667" Name="SequenceActivity">
+                      <p:SequenceActivity.Activities>
+                        <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.1.2.19, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="394,88" LogMessage="[Log_LogMessage_1]" Message="Umbrella service is already running, exiting." Message_DisplayArg="Umbrella service is already running, exiting." Moniker="2324c81e-b274-42d1-a0d9-23f743188d66" Result="[Log_Result_1]" ResultString="[Log_ResultString_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                      </p:SequenceActivity.Activities>
+                      <p:SequenceActivity.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Log_LogMessage_1" />
+                        <Variable x:TypeArguments="x:Double" Name="Log_Result_1" />
+                        <Variable x:TypeArguments="x:String" Name="Log_ResultString_1" />
+                      </p:SequenceActivity.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </p:SequenceActivity>
+                  </p:IfElse.IfOption>
+                  <p:IfElse.Value>
+                    <InArgument x:TypeArguments="x:Object">
+                      <p:ObjectLiteral Value="True" />
+                    </InArgument>
+                  </p:IfElse.Value>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                </p:FormatString>
-                <p:FormatString Input0_Item="{x:Null}" Input0_ItemProp="{x:Null}" Input1_Item="{x:Null}" Input1_ItemProp="{x:Null}" Text_Item="{x:Null}" Text_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Add Umbrella UserID - Format String" FormattedString="[FormatString_FormattedString_1]" sap:VirtualizedContainerService.HintSize="643,160" Input0="[FormatString_FormattedString]" Input0_DisplayArg="ADD OrgID and Fingerprint - Format String.FormattedString" Input1="[UserID]" Input1_DisplayArg="Input Parameters.Umbrella User ID" Moniker="334d02d3-68c1-49fb-965a-323aa4297aa6" Result="[FormatString_Result_1]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Text="{}{0} USER_ID={1} HIDE_UI=1 HIDE_ARP=1" Text_DisplayArg="{}{0} USER_ID={1} HIDE_UI=1 HIDE_ARP=1" TypeName="FormatString" m_bTextLinkChange="False" />
-                <p:SetEnvironmentVariable Type_Item="{x:Null}" Type_ItemProp="{x:Null}" UserName="{x:Null}" UserName_DisplayArg="{x:Null}" UserName_Item="{x:Null}" UserName_ItemProp="{x:Null}" Value_Item="{x:Null}" Value_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Set Environment Variable" sap:VirtualizedContainerService.HintSize="643,196" Moniker="90d2aa72-3352-42a8-9798-2e55eb4778f4" Result="[SetEnvironmentVariable_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Type="Machine" TypeName="SetEnvironmentVariable" Type_DisplayArg="Machine" Value="[FormatString_FormattedString_1]" Value_DisplayArg="Add Umbrella UserID - Format String.FormattedString" Variable="OpenDNSConcatString" Variable_DisplayArg="OpenDNSConcatString" m_bTextLinkChange="False" />
-                <p:GetEnvironmentVariable Type_Item="{x:Null}" Type_ItemProp="{x:Null}" Variable_Item="{x:Null}" Variable_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Full Install String - Get Environment Variable" sap:VirtualizedContainerService.HintSize="643,124" Moniker="2001381d-7cc5-4162-820f-dacdb8e03d2b" Result="[GetEnvironmentVariable_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" Type="Machine" TypeName="GetEnvironmentVariable" Type_DisplayArg="Machine" Value="[GetEnvironmentVariable_Value]" Variable="OpenDNSConcatString" Variable_DisplayArg="OpenDNSConcatString" m_bTextLinkChange="False" />
-                <p:RunProgram Arguments_Item="{x:Null}" Arguments_ItemProp="{x:Null}" Program_Item="{x:Null}" Program_ItemProp="{x:Null}" WaitForCompletion_Item="{x:Null}" WaitForCompletion_ItemProp="{x:Null}" WindowType_Item="{x:Null}" WindowType_ItemProp="{x:Null}" WorkingDirectory_Item="{x:Null}" WorkingDirectory_ItemProp="{x:Null}" Arguments="[GetEnvironmentVariable_Value]" Arguments_DisplayArg="Full Install String - Get Environment Variable.Value" AssemblyName="PolicyExecutionEngine, Version=1.6.0.33, Culture=neutral, PublicKeyToken=null" DisplayName="Run Program" sap:VirtualizedContainerService.HintSize="643,232" Moniker="7304120d-7817-4acd-ad37-043f851f0828" ProcessID="[RunProgram_ProcessID]" Program="msiexec.exe" Program_DisplayArg="msiexec.exe" Result="[RunProgram_Result]" RunAsCurrentLoggedOnUser="True" ScriptExecutionMethod="None" TypeName="RunProgram" WaitForCompletion="True" WaitForCompletion_DisplayArg="" WindowType="Hidden" WindowType_DisplayArg="Hidden" WorkingDirectory="c:\temp\opendns\" WorkingDirectory_DisplayArg="c:\temp\opendns\" m_bTextLinkChange="False" />
-                <p:DeleteFolder Folder_Item="{x:Null}" Folder_ItemProp="{x:Null}" Force_Item="{x:Null}" Force_ItemProp="{x:Null}" Recurse_Item="{x:Null}" Recurse_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" DisplayName="Delete Folder" Folder="c:\temp\opendns\" Folder_DisplayArg="c:\temp\opendns\" Force="True" Force_DisplayArg="" sap:VirtualizedContainerService.HintSize="643,160" Moniker="d1e586c0-5728-4000-bf32-9987a2ab2b22" Recurse="True" Recurse_DisplayArg="true" Result="[DeleteFolder_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="DeleteFolder" m_bTextLinkChange="False" />
+                </p:IfElse>
               </p:SequenceActivity.Activities>
               <p:SequenceActivity.Variables>
-                <Variable x:TypeArguments="x:String" Name="CreateFolder_FolderInfo" />
-                <Variable x:TypeArguments="x:Double" Name="CreateFolder_Result" />
-                <Variable x:TypeArguments="x:Double" Name="DownloadFileFromURL_Result" />
-                <Variable x:TypeArguments="x:String" Name="FormatString_FormattedString" />
-                <Variable x:TypeArguments="x:Double" Name="FormatString_Result" />
-                <Variable x:TypeArguments="x:String" Name="FormatString_FormattedString_1" />
-                <Variable x:TypeArguments="x:Double" Name="FormatString_Result_1" />
-                <Variable x:TypeArguments="x:Double" Name="SetEnvironmentVariable_Result" />
-                <Variable x:TypeArguments="x:Double" Name="GetEnvironmentVariable_Result" />
-                <Variable x:TypeArguments="x:String" Name="GetEnvironmentVariable_Value" />
-                <Variable x:TypeArguments="x:String" Name="RunProgram_ProcessID" />
-                <Variable x:TypeArguments="x:Double" Name="RunProgram_Result" />
-                <Variable x:TypeArguments="x:Double" Name="DeleteFolder_Result" />
+                <Variable x:TypeArguments="x:String" Name="IsServiceRunning_Conditional" />
+                <Variable x:TypeArguments="x:String" Name="IsServiceRunning_ResultString" />
+                <Variable x:TypeArguments="x:Double" Name="IsServiceRunning_Result" />
+                <Variable x:TypeArguments="x:Double" Name="IfElse_Result_1" />
+                <Variable x:TypeArguments="x:String" Name="IfElse_ResultString_1" />
               </p:SequenceActivity.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </p:SequenceActivity>
           </p:IfElse.ElseOption>
           <p:IfElse.IfOption>
-            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="681,238" Name="SequenceActivity">
+            <p:SequenceActivity DisplayName="Then" sap:VirtualizedContainerService.HintSize="174,80" Name="SequenceActivity">
               <p:SequenceActivity.Activities>
-                <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="643,88" LogMessage="[Log_LogMessage]" Message="Umbrella Roaming Client not support on Windows Server Operating Systems. Exiting." Message_DisplayArg="Umbrella Roaming Client not support on Windows Server Operating Systems. Exiting." Moniker="e0381958-bfa1-4063-8191-83cb8a5aa635" Result="[Log_Result]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
+                <p:Log Message_Item="{x:Null}" Message_ItemProp="{x:Null}" AssemblyName="PolicyExecutionEngine, Version=2.0.4.37, Culture=neutral, PublicKeyToken=null" DisplayName="Log" sap:VirtualizedContainerService.HintSize="626,88" LogMessage="[Log_LogMessage]" Message="Umbrella Roaming Client not support on Windows Server Operating Systems. Exiting." Message_DisplayArg="Umbrella Roaming Client not support on Windows Server Operating Systems. Exiting." Moniker="e0381958-bfa1-4063-8191-83cb8a5aa635" Result="[Log_Result]" ResultString="[Log_ResultString]" RunAsCurrentLoggedOnUser="False" ScriptExecutionMethod="ExecuteDebug" TypeName="Log" m_bTextLinkChange="False" />
               </p:SequenceActivity.Activities>
               <p:SequenceActivity.Variables>
                 <Variable x:TypeArguments="x:String" Name="Log_LogMessage" />
                 <Variable x:TypeArguments="x:Double" Name="Log_Result" />
+                <Variable x:TypeArguments="x:String" Name="Log_ResultString" />
               </p:SequenceActivity.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
             </p:SequenceActivity>
           </p:IfElse.IfOption>
           <p:IfElse.Value>
@@ -76,15 +147,22 @@
               <p:ObjectLiteral Value="Server" />
             </InArgument>
           </p:IfElse.Value>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
         </p:IfElse>
       </p:PolicySequence.Activities>
       <p:PolicySequence.Variables>
         <Variable x:TypeArguments="x:String" Name="GetOSType_Value" />
         <Variable x:TypeArguments="x:Double" Name="GetOSType_Result" />
-        <Variable x:TypeArguments="x:Double" Name="IfElse_Result" />
         <Variable x:TypeArguments="x:String" Default="1" Name="UserID" />
         <Variable x:TypeArguments="x:String" Default="2" Name="OrganizationID" />
         <Variable x:TypeArguments="x:String" Default="3" Name="Fingerprint" />
+        <Variable x:TypeArguments="x:String" Name="GetOSType_ResultString" />
+        <Variable x:TypeArguments="x:Double" Name="IfElse_Result" />
+        <Variable x:TypeArguments="x:String" Name="IfElse_ResultString" />
       </p:PolicySequence.Variables>
     </p:PolicySequence>
   </Activity>
