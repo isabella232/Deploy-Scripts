@@ -70,7 +70,7 @@ Once in the Create a policy wizard, name the policy and choose the Role to be `W
 	</tbody>
 </table>
 
-Now that you are in the Policy Editor you will need to create a `Scheduled Action`, set the paramaters as desired and then choose the Action to be `Install Application`.
+Now that you are in the Policy Editor you will need to create a `Scheduled Action`, set the parameters as desired and then choose the Action to be `Install Application`.
 
 <table style="width:75%">
 	<tbody>
@@ -118,7 +118,7 @@ Installation Parameter: _Use string from Customer Management shown below_
 
 Run As: `System`
 
-You should end up with somethign that looks like this:
+You should end up with something that looks like this:
 
 <table style="align:center"><colgroup><col width="624" /></colgroup>
 	<tbody>

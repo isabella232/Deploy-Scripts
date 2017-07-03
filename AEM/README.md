@@ -1,4 +1,4 @@
-###Deploying Umbrella roaming client with Autotask Endpoint Manager (AEM)
+### Deploying Umbrella roaming client with Autotask Endpoint Manager (AEM)
 <div>
 <table style="height: 50px; width: 100%">
 	<tbody>
@@ -15,7 +15,7 @@
 	<tbody>
 		<tr>
 			<td bgcolor="#ffffcc">
-				<p><strong>NOTE:</strong> This document is specific to deploying the Umbrella roaming client on Windows client operating systems, such as Windows 8 or 10. We do not support the installation of the Umbrella roaming client on Windows Server operating systems. A list of prerequisites is available <a href="https://docs.umbrella.com/product/msp/prerequisites/">here</a>. This document assumes you've read these prerequisistes and have opened the appropriate firewall ports</p>
+				<p><strong>NOTE:</strong> This document is specific to deploying the Umbrella roaming client on Windows client operating systems, such as Windows 8 or 10. We do not support the installation of the Umbrella roaming client on Windows Server operating systems. A list of prerequisites is available <a href="https://docs.umbrella.com/product/msp/prerequisites/">here</a>. This document assumes you've read these prerequisites and have opened the appropriate firewall ports</p>
 			</td>
 		</tr>
 	</tbody>
@@ -145,7 +145,7 @@ To review results, click on the Job name and view the status as shown below.
 	</tbody>
 </table>
 
-A successfull install will show the following ```Stdout``` output:
+A successful install will show the following ```Stdout``` output:
 
 <table style="width:100%">
 	<tbody>
