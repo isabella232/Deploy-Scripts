@@ -21,6 +21,7 @@
 	</tbody>
 </table>
 </div>
+
 AEM provides the ability to use ```Components``` to deploy software or perform tasks. Components are essentially scripts in various languages (sometimes with environment variables) used in ```Jobs``` to run on the endpoints. The component available for download <a href="https://github.com/opendns/Deploy-Scripts/raw/master/AEM/DeployUmbrellaRoamingClient.cpt">here</a> is a PowerShell script with environment variables.
 
 <div>
@@ -36,178 +37,58 @@ AEM provides the ability to use ```Components``` to deploy software or perform t
 
 Once logged into your AEM Portal, you will see the top navigation menu where you will select the devices you wish to deploy the roaming client to. __Note that you are only able to deploy to a single customer at a time__. 
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/Devices.png" border="0" alt="Sites > Site Name > Devices">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Devices](docs/Devices.png)
+
 
 Once you have selected the appropriate devices, schedule a Job to run: 
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/ScheduleJob.png" border="0" alt="Schedule Job">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Schedule](docs/ScheduleJob.png)
 
 You will then be prompted for a Job name, Component to add and any alerting options you want to configure. First, choose the name for the Job and when you want to schedule the Job to run. Then, click ```Add a Component```.
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/AddComponent.png" border="0" alt="Add Component">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Component](docs/AddComponent.png)
 
 Now, select the ```Deploy Umbrella roaming client``` component and click ```Add```.
 
-<table style="align:center"><colgroup><col width="624" /></colgroup>
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/SelectComponent.png" border="0" alt="Deployment Parameters">
-			</td>
-		</tr>
-  </tbody>
-</table>
-
+![Parameters](docs/SelectComponent.png)
 
 Now that you've added the Component, you will see a section for Variables. This is what associates the roaming client with the correct customer organization. In the MSP Console, you can find the  ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters by navigating to Customer Management and expanding a customer.
 
-<table>
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/CustomerManagement.png" border="0" alt="Click the Caret">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Click the Caret](docs/CustomerManagement.png)
+
 Parameters are located in the _Deployment Parameters_ area. 
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/RoamingParameters.png" border="0" alt="Script Parameters">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Script Parameters](docs/RoamingParameters.png)
 
 Copy the appropriate variables into the fields as shown below.
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/Variables.png" border="0" alt="Component Variables">
-			</td>
-		</tr>
-	</tbody>
-</table>
-
+![Component Variables](docs/Variables.png)
 
 The rest of the Job page is optional, but if you want alerts with logs emailed to you, you can use the Alerts + Job Recipients section to do so:
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/AlertOptions.png" border="0" alt="Alert Options" style="vertical-align:middle">
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
+![Alert Options](docs/AlertOptions.png)
 
 To review results, click on the Job name and view the status as shown below. 
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/SuccessResult.png" border="0" alt="Job Results" style="vertical-align:middle">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Job Results](docs/SuccessResult.png)
 
 A successful install will show the following ```Stdout``` output:
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/Successful.png" border="0" alt="Script Parameters">
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
-
+![Script Parameters](docs/Successful.png)
 
 In this example, we see a failed job and the logs from the script are in the ```Stdout``` output.
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/Results.png" border="0" alt="Job Results" style="vertical-align:middle">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Job Results](docs/Results.png)
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/ErrorMessage.png" border="0" alt="Stdout logs">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Stdout logs](docs/ErrorMessage.png)
 
 Another example:
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/Error2.png" border="0" alt="Stdout logs">
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-
-
-
+![Stdout logs](docs/Error2.png)
 
 To confirm the roaming client is checking in, log into your Umbrella Dashboard and choose the customer where you ran the deployment script. Navigate to Identities > Roaming Computers, and search for the individual host names where the script should have been run.  If the computer is checking in properly, you’ll notice a green status icon as shown below:  
 
-<table style="width:100%">
-	<tbody>
-		<tr>
-			<td>
-				<img src="docs/PolicyStatus.png" border="0" alt="Roaming Client in Dashboard">
-			</td>
-		</tr>
-	</tbody>
-</table>
+![Roaming Client in Dashboard](docs/PolicyStatus.png)
+
 
 Computers without a green status icon are not checking in properly with Umbrella.  Please check [this support article](https://docs.umbrella.com/product/msp/appendix-a-status-and-functionality/) for more information on the status icons and troubleshooting.
