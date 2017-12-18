@@ -35,22 +35,38 @@ AEM provides the ability to use ```Components``` to deploy software or perform t
 </table>
 </div>
 
+In the AEM dashboard, click on **Components** and then **Import Component** to upload the script downloaded from <a href="https://github.com/opendns/Deploy-Scripts/raw/master/AEM/DeployUmbrellaRoamingClient.cpt">here</a>. 
+
+![Components > Add Component](docs/ImportComponent.png)
+
+Next, select the component you just downloaded and click **Upload**:
+
+![Components > Add Component](docs/ImportComponent2.png)
+
+Finally, click **Save** after confirming the script has successfully imported:
+
+![Components > Add Component](docs/ImportComponent3.png)
+
+![Components > Add Component](docs/ImportComponent4.png)
+
+**Note:** There is no need to edit the script parameters, etc.
+
 Once logged into your AEM Portal, you will see the top navigation menu where you will select the devices you wish to deploy the roaming client to. __Note that you are only able to deploy to a single customer at a time__. 
 
-![Devices](docs/Devices.png)
+![Sites > Site Name > Devices](docs/Devices.png)
 
 
 Once you have selected the appropriate devices, schedule a Job to run: 
 
-![Schedule](docs/ScheduleJob.png)
+![Schedule Job](docs/ScheduleJob.png)
 
 You will then be prompted for a Job name, Component to add and any alerting options you want to configure. First, choose the name for the Job and when you want to schedule the Job to run. Then, click ```Add a Component```.
 
-![Component](docs/AddComponent.png)
+![Add Component](docs/AddComponent.png)
 
 Now, select the ```Deploy Umbrella roaming client``` component and click ```Add```.
 
-![Parameters](docs/SelectComponent.png)
+![Deployment Parameters](docs/SelectComponent.png)
 
 Now that you've added the Component, you will see a section for Variables. This is what associates the roaming client with the correct customer organization. In the MSP Console, you can find the  ```User_ID```, ```Org_ID``` and ```Org_Fingerprint``` parameters by navigating to Customer Management and expanding a customer.
 
