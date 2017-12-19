@@ -51,7 +51,7 @@ Finally, click **Save** after confirming the script has successfully imported:
 
 **Note:** There is no need to edit the script parameters, etc.
 
-Once logged into your AEM Portal, you will see the top navigation menu where you will select the devices you wish to deploy the roaming client to. __Note that you are only able to deploy to a single customer at a time__. 
+In your AEM Portal, you will see the top navigation menu where you will select the devices you wish to deploy the roaming client to. __Note that you are only able to deploy to a single customer at a time__. 
 
 ![Sites > Site Name > Devices](docs/Devices.png)
 
