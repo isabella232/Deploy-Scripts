@@ -112,7 +112,7 @@ __Script Description__:  Installation script for the Umbrella Roaming Client for
 ###“Download Details” Section
 Location:
 ```
-http://shared.opendns.com/roaming/enterprise/release/win/production/
+https://cisco-umbrella-client-downloads.s3.amazonaws.com/win/production/
 ```
 
 _Note that this URL does not work in a browser unless you include the filename ```Setup.msi```in the URL. This location tells Continuum where to look for the file, and below we'll be setting the filename._
