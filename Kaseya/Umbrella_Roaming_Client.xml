@@ -75,7 +75,7 @@
                                 <Parameter xsi:type="StringParameter" name="Comment" value="Umbrella Roaming Client not detetected. Proceeding with installation..." />
                               </Statement>
                               <Statement name="GetURL" continueOnFail="false" osType="Windows">
-                                <Parameter xsi:type="StringParameter" name="URL" value="http://shared.opendns.com/roaming/enterprise/release/win/production/Setup.msi" />
+                                <Parameter xsi:type="StringParameter" name="URL" value="https://cisco-umbrella-client-downloads.s3.amazonaws.com/win/production/Setup.msi" />
                                 <Parameter xsi:type="StringParameter" name="ResponseFileName" value="#vagentconfiguration.agenttempdir#\Setup.msi" />
                                 <Parameter xsi:type="BooleanParameter" name="WaitComplete" value="True" />
                               </Statement>
